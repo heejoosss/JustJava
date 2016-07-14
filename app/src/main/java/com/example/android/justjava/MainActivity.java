@@ -22,8 +22,22 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(2);
-        displayPrice(2*10);
+        int numberOfCoffees = 3;
+        display(numberOfCoffees);
+        displayPrice(numberOfCoffees * 5);
+    }
+
+    /**
+     * This method is called when the plus or minus button is clicked.
+     */
+    public void increase(View view) {
+        int quantity = 3;
+        display(quantity);
+    }
+
+    public void decrease(View view) {
+        int quantity = 1;
+        display(quantity);
     }
 
     /**
