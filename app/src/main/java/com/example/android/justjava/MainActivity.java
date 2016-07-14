@@ -18,25 +18,26 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
+    int quantity = 0;
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffees = 3;
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        int price = quantity*5;
+        String priceMessage = "Total : $" + price;
+        displayMessage(priceMessage);
     }
 
     /**
      * This method is called when the plus or minus button is clicked.
      */
     public void increase(View view) {
-        int quantity = 3;
+        quantity = quantity + 1;
         display(quantity);
     }
 
     public void decrease(View view) {
-        int quantity = 1;
+        quantity = quantity - 1;
         display(quantity);
     }
 
@@ -55,5 +56,13 @@ public class MainActivity extends ActionBarActivity {
         TextView quantityTextView = (TextView) findViewById(
                 R.id.quantity_text_view);
         quantityTextView.setText("" + number);
+    }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 }
