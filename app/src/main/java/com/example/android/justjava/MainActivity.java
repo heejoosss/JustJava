@@ -8,7 +8,7 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 
 /**
- * This app displays an order form to order coffee.
+ * This app displays an order form to order coffee!
  */
 public class MainActivity extends ActionBarActivity {
 
